@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/day_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="60sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black">
+
+        <!--// 一行目-->
+        <TableRow
+            android:background="@color/black">
+
+            <TextView
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"/>
+
+            <!--// 日-->
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/sunday"
+                android:gravity="center"/>
+
+            <!--// 月-->
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/monday"
+                android:gravity="center"/>
+
+            <!--// 火-->
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/tuesday"
+                android:gravity="center"/>
+
+            <!--// 水-->
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/wednesday"
+                android:gravity="center"/>
+
+            <!--// 木-->
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/thursday"
+                android:gravity="center"/>
+
+            <!--// 金-->
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/friday"
+                android:gravity="center"/>
+
+            <!--// 土-->
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/saturday"
+                android:gravity="center"/>
+
+        </TableRow>
+
+        <!--// 情報セキュリティ-->
+        <TableRow>
+            <TextView
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/security"/>
+
+            <!--// 日-->
+            <TextView
+                android:id="@+id/security_sunday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 月-->
+            <TextView
+                android:id="@+id/security_monday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 火-->
+            <TextView
+                android:id="@+id/security_tuesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 水-->
+            <TextView
+                android:id="@+id/security_wednesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 木-->
+            <TextView
+                android:id="@+id/security_thursday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 金-->
+            <TextView
+                android:id="@+id/security_friday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 土-->
+            <TextView
+                android:id="@+id/security_saturday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+        </TableRow>
+
+        <!--// システムアーキテクチャ-->
+        <TableRow>
+            <TextView
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/architecture"/>
+
+            <!--// 日-->
+            <TextView
+                android:id="@+id/architecture_sunday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 月-->
+            <TextView
+                android:id="@+id/architecture_monday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 火-->
+            <TextView
+                android:id="@+id/architecture_tuesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 水-->
+            <TextView
+                android:id="@+id/architecture_wednesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 木-->
+            <TextView
+                android:id="@+id/architecture_thursday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 金-->
+            <TextView
+                android:id="@+id/architecture_friday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 土-->
+            <TextView
+                android:id="@+id/architecture_saturday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+        </TableRow>
+
+        <!--// プログラミング-->
+        <TableRow>
+            <TextView
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/program"/>
+
+            <!--// 日-->
+            <TextView
+                android:id="@+id/program_sunday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 月-->
+            <TextView
+                android:id="@+id/program_monday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 火-->
+            <TextView
+                android:id="@+id/program_tuesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 水-->
+            <TextView
+                android:id="@+id/program_wednesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 木-->
+            <TextView
+                android:id="@+id/program_thursday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 金-->
+            <TextView
+                android:id="@+id/program_friday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 土-->
+            <TextView
+                android:id="@+id/program_saturday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+        </TableRow>
+
+        <!--// ネットワーク-->
+        <TableRow>
+            <TextView
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/network"/>
+
+            <!--// 日-->
+            <TextView
+                android:id="@+id/network_sunday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 月-->
+            <TextView
+                android:id="@+id/network_monday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 火-->
+            <TextView
+                android:id="@+id/network_tuesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 水-->
+            <TextView
+                android:id="@+id/network_wednesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 木-->
+            <TextView
+                android:id="@+id/network_thursday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 金-->
+            <TextView
+                android:id="@+id/network_friday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 土-->
+            <TextView
+                android:id="@+id/network_saturday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+        </TableRow>
+
+        <!--// データベース-->
+        <TableRow>
+            <TextView
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/database"/>
+
+            <!--// 日-->
+            <TextView
+                android:id="@+id/database_sunday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 月-->
+            <TextView
+                android:id="@+id/database_monday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 火-->
+            <TextView
+                android:id="@+id/database_tuesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 水-->
+            <TextView
+                android:id="@+id/database_wednesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 木-->
+            <TextView
+                android:id="@+id/database_thursday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 金-->
+            <TextView
+                android:id="@+id/database_friday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 土-->
+            <TextView
+                android:id="@+id/database_saturday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+        </TableRow>
+
+        <!--// システム監査-->
+        <TableRow>
+            <TextView
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/audit"/>
+
+            <!--// 日-->
+            <TextView
+                android:id="@+id/audit_sunday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 月-->
+            <TextView
+                android:id="@+id/audit_monday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 火-->
+            <TextView
+                android:id="@+id/audit_tuesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 水-->
+            <TextView
+                android:id="@+id/audit_wednesday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 木-->
+            <TextView
+                android:id="@+id/audit_thursday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 金-->
+            <TextView
+                android:id="@+id/audit_friday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+            <!--// 土-->
+            <TextView
+                android:id="@+id/audit_saturday"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="ChangeColor"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <!--<TableLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1">-->
+
+        <!--// １列目-->
+        <!--<TableRow>-->
+
+            <!--// 空白-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+            <!--// 日-->
+            <!--<TextView-->
+                <!--android:id="@+id/day_sunday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/sunday"-->
+                <!--android:gravity="center"/>-->
+
+            <!--// 月-->
+            <!--<TextView-->
+                <!--android:id="@+id/day_monday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/monday"-->
+                <!--android:gravity="center"/>-->
+
+            <!--// 火-->
+            <!--<TextView-->
+                <!--android:id="@+id/day_tuesday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/tuesday"-->
+                <!--android:gravity="center"/>-->
+
+            <!--// 水-->
+            <!--<TextView-->
+                <!--android:id="@+id/day_wednesday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/wednesday"-->
+                <!--android:gravity="center"/>-->
+
+            <!--// 木-->
+            <!--<TextView-->
+                <!--android:id="@+id/day_thursday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/thursday"-->
+                <!--android:gravity="center"/>-->
+
+            <!--// 金-->
+            <!--<TextView-->
+                <!--android:id="@+id/day_friday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/friday"-->
+                <!--android:gravity="center"/>-->
+
+            <!--// 土-->
+            <!--<TextView-->
+                <!--android:id="@+id/day_saturday"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/saturday"-->
+                <!--android:gravity="center"/>-->
+        <!--</TableRow>-->
+
+        <!--// ２列目-->
+        <!--<TableRow>-->
+
+            <!--// 科目名-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+
+                <!--// 情報セキュリティ-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/security" />-->
+
+                <!--//　システムアーキテクチャ-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/architecture"/>-->
+
+                <!--// プログラム programming-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/programming" />-->
+
+                <!--// ネットワーク network-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/network" />-->
+
+                <!--// データベース database-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/database" />-->
+
+                <!--// システム監査 audit-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/audit" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--// 科目ごとに日月火水木金土-->
+            <!--/* イメージ-->
+                <!--情報セキュリティの 日月火水木金土-->
+                <!--アーキテクチャの　 日月火水木金土-->
+                <!--プログラムの　     日月火水木金土-->
+                <!--ネットワークの　   日月火水木金土-->
+                <!--データベースの　   日月火水木金土-->
+                <!--システム監査の     日月火水木金土-->
+            <!--*/-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical" >-->
+
+                <!--// 情報セキュリティ security-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--// 日-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/security_sunday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="@string/sunday"/>-->
+
+                    <!--// 月-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/security_monday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 火-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/security_tuesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 水-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/security_wednesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 木-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/security_thursday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 金-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/security_friday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 土-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/security_saturday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--// システムアーキテクチャ architecture-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--// 日-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/architecture_sunday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 月-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/architecture_monday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 火-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/architecture_tuesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 水-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/architecture_wednesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 木-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/architecture_thursday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 金-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/architecture_friday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 土-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/architecture_saturday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--// プログラム programming-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--// 日-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/programming_sunday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 月-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/programming_monday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 火-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/programming_tuesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 水-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/programming_wednesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 木-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/programming_thursday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 金-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/programming_friday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 土-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/programming_saturday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--// ネットワーク network-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--// 日-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/network_sunday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 月-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/network_monday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 火-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/network_tuesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 水-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/network_wednesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 木-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/network_thursday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 金-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/network_friday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 土-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/network_saturday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--// データベース database-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--// 日-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/database_sunday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 月-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/database_monday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 火-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/database_tuesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 水-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/database_wednesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 木-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/database_thursday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 金-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/database_friday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 土-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/database_saturday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--// システム監査 audit-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--// 日-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/audit_sunday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 月-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/audit_monday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 火-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/audit_tuesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 水-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/audit_wednesday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 木-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/audit_thursday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 金-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/audit_friday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                    <!--// 土-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/audit_saturday"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="wrap_content"/>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+
+        <!--</TableRow>-->
+
+    <!--</TableLayout>-->
+
+</LinearLayout>
