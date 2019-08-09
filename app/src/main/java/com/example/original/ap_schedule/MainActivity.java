@@ -125,29 +125,24 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(this, "初期登録", Toast.LENGTH_LONG).show();
 
-            try{
-                realm.beginTransaction();
+            realm.beginTransaction();
 
-                for(String day_name :  days_name){
-                    Info info = new Info(
-                            day_name,
-                            false,
-                            false,
-                            false,
-                            false,
-                            false,
-                            false
+            for(String day_name :  days_name){
+                Info info = new Info(
+                        day_name,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false
                     );
 
-                    Info infoRealm = realm.copyToRealm(info);
-                }
-
-                // コミットは、本当に最後にやる。コミットするとfor文抜ける。たぶんRealmが閉じる
-                realm.commitTransaction();
-
-            }catch(Exception e){
-                e.printStackTrace();
+                Info infoRealm = realm.copyToRealm(info);
             }
+
+            // コミットは、本当に最後にやる。コミットするとfor文抜ける。たぶんRealmが閉じる
+            realm.commitTransaction();
         }
     }
 
@@ -230,6 +225,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // タップ時の処理
+    // 1. 空白 -> 黄色と〇, 黄色と〇 -> 空白
+    // 2. 変わった後、やるべき科目を黄色で表示する
     public void ChangeColor(View view){
         // 入力されていたTextViewのid名をFullで取得
         String xml_name = getResources().getResourceName(view.getId());
@@ -244,137 +242,115 @@ public class MainActivity extends AppCompatActivity {
         String day_name = id_name.substring(_index + 1);
 
 
+        Log.v("day_name", item_name);
+        Log.v("day_name", day_name);
+
         // 入力されている文字を取得
         String input_text = ((TextView) view).getText().toString();
 
-        try{
-            switch (input_text){
-                // "〇"が入力されたいた場合
-                case "〇":
-                    ((TextView) view).setText("");
-                    view.setBackgroundColor(Color.argb(255, 255, 255, 255));
+        // 黄色と〇 -> 空白にする
+        if(input_text.equals("〇")){
+            ((TextView) view).setText("");
+            view.setBackgroundColor(Color.argb(255, 255, 255, 255));
 
-                    Update_info(day_name, item_name, false);
+            Update_info(day_name, item_name, false);
 
-
-                    // 勉強する科目の曜日だったとき
-                    Calendar today = Calendar.getInstance();
-                    int TODAY_DAY_OF_WEEK = 0;
-
-                    switch (day_name){
-                        case "sunday":
-                            TODAY_DAY_OF_WEEK = 1;
-
-                            // 日曜日は特別な処理を書く
-//                            if(today.get(Calendar.DAY_OF_WEEK) == TODAY_DAY_OF_WEEK) {
-//                                if(true){
-//
-//                                }
-//                                else{
-//
-//                                }
-//                            }
-                            break;
-
-                        case "monday":
-                            TODAY_DAY_OF_WEEK = 2;
-
-                            if(today.get(Calendar.DAY_OF_WEEK) == TODAY_DAY_OF_WEEK) {
-                                if(item_name.equals("security")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                                else if(item_name.equals("architecture")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                            }
-                            break;
-
-                        case "tuesday":
-                            TODAY_DAY_OF_WEEK = 3;
-
-                            if(today.get(Calendar.DAY_OF_WEEK) == TODAY_DAY_OF_WEEK) {
-                                if(item_name.equals("security")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                                else if(item_name.equals("architecture")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                            }
-                            break;
-
-                        case "wednesday":
-                            TODAY_DAY_OF_WEEK = 4;
-
-                            if(today.get(Calendar.DAY_OF_WEEK) == TODAY_DAY_OF_WEEK) {
-                                if(item_name.equals("program")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                                else if(item_name.equals("network")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                            }
-                            break;
-
-                        case "thursday":
-                            TODAY_DAY_OF_WEEK = 5;
-
-                            if(today.get(Calendar.DAY_OF_WEEK) == TODAY_DAY_OF_WEEK) {
-                                if(item_name.equals("program")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                                else if(item_name.equals("network")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                            }
-                            break;
-
-                        case "friday":
-                            TODAY_DAY_OF_WEEK = 6;
-
-                            if(today.get(Calendar.DAY_OF_WEEK) == TODAY_DAY_OF_WEEK) {
-                                if(item_name.equals("database")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                                else if(item_name.equals("audit")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                            }
-                            break;
-
-                        case "saturday":
-                            TODAY_DAY_OF_WEEK = 7;
-
-                            if(today.get(Calendar.DAY_OF_WEEK) == TODAY_DAY_OF_WEEK) {
-                                if(item_name.equals("database")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                                else if(item_name.equals("audit")){
-                                    view.setBackgroundColor(Color.YELLOW);
-                                }
-                            }
-                            break;
-
-                    }
-
-
-                    break;
-
-                // 空白だった場合
-                default:
-                    ((TextView) view).setText("〇");
-                    view.setBackgroundColor(Color.rgb(255, 165, 0));
-
-                    Update_info(day_name, item_name, true);
-                    break;
-            }
-        }catch (NullPointerException e){
-            e.printStackTrace();
-        }catch (Exception e){
-            e.printStackTrace();
+            return_Doing_item(view, day_name, item_name);
         }
+        // 空白 -> 黄色と〇にする
+        else{
+            ((TextView) view).setText("〇");
+            view.setBackgroundColor(Color.rgb(255, 165, 0));
 
+            Update_info(day_name, item_name, true);
+        }
     }
 
+    // タップ時、やるべき科目を黄色にする
+    public void return_Doing_item(View view, String day_name, String item_name){
+        // 今日の曜日を取得する
+        Calendar today = Calendar.getInstance();
+        int TODAY_DAY_OF_WEEK = today.get(Calendar.DAY_OF_WEEK);
+
+        // タップした曜日と今日の曜日が同じとき
+        if(day_name.equals(days_name[TODAY_DAY_OF_WEEK - 1])){
+
+            // 今日の曜日ごとに色を変えるviewを変える
+            switch (TODAY_DAY_OF_WEEK) {
+                // 日曜日
+                case 1:
+                    // 特別な処理を書く
+                    break;
+
+                // 月曜日
+                case 2:
+
+                    // 月曜日なら「security」と「architecture」は黄色にする
+                    if (item_name.equals("security")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    } else if (item_name.equals("architecture")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    }
+                    break;
+
+                // 火曜日
+                case 3:
+                    // 火曜日なら「security」と「architecture」は黄色にする
+                    if (item_name.equals("security")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    } else if (item_name.equals("architecture")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    }
+                    break;
+
+                // 水曜日
+                case 4:
+
+                    // 水曜日なら「program」と「network」は黄色にする
+                    if (item_name.equals("program")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    } else if (item_name.equals("network")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    }
+                    break;
+
+                // 木曜日
+                case 5:
+
+                    // 木曜日なら「program」と「network」は黄色にする
+                    if (item_name.equals("program")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    } else if (item_name.equals("network")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    }
+                    break;
+
+                // 金曜日
+                case 6:
+
+                    // 金曜日なら「database」と「audit」は黄色にする
+                    if (item_name.equals("database")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    } else if (item_name.equals("audit")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    }
+                    break;
+
+                // 土曜日
+                case 7:
+
+                    // 土曜日なら「database」と「audit」は黄色にする
+                    if (item_name.equals("database")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    } else if (item_name.equals("audit")) {
+                        view.setBackgroundColor(Color.YELLOW);
+                    }
+                    break;
+            }
+        }
+    }
+
+    // Realmに更新をかける
     public void Update_info(String day_name, String item_name, boolean flg){
         realm.beginTransaction();
 
