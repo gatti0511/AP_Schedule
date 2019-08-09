@@ -185,6 +185,28 @@ public class MainActivity extends AppCompatActivity {
             // 日
             case 1:
                 // 特殊な処理を書く
+
+                int week = ((int) DaysCalculation(AP_YEAR, AP_MONTH, AP_DATE)) % 7;
+                int diff = week % 3;
+
+                switch (diff){
+                    // 残りの週が０なら、データベースとシステム監査を勉強する
+                    case 0:
+                        ((TextView) findViewById(R.id.database_sunday)).setBackgroundColor(Color.YELLOW);
+                        ((TextView) findViewById(R.id.audit_sunday)).setBackgroundColor(Color.YELLOW);
+                        break;
+
+                    // 残りの週が１なら、情報セキュリティとシステムアーキテクチャを勉強する
+                    case 1:
+                        ((TextView) findViewById(R.id.security_sunday)).setBackgroundColor(Color.YELLOW);
+                        ((TextView) findViewById(R.id.architecture_sunday)).setBackgroundColor(Color.YELLOW);
+                        break;
+
+                    // 残りの週が２なら、プログラムとネットワークを勉強する
+                    case 2:
+                        ((TextView) findViewById(R.id.program_sunday)).setBackgroundColor(Color.YELLOW);
+                        ((TextView) findViewById(R.id.network_sunday)).setBackgroundColor(Color.YELLOW);
+                }
                 break;
 
             // 月
@@ -280,6 +302,27 @@ public class MainActivity extends AppCompatActivity {
                 // 日曜日
                 case 1:
                     // 特別な処理を書く
+                    int week = ((int) DaysCalculation(AP_YEAR, AP_MONTH, AP_DATE)) % 7;
+                    int diff = week % 3;
+
+                    switch (diff){
+                        // 残りの週が０なら、データベースとシステム監査を勉強する
+                        case 0:
+                            ((TextView) findViewById(R.id.database_sunday)).setBackgroundColor(Color.YELLOW);
+                            ((TextView) findViewById(R.id.audit_sunday)).setBackgroundColor(Color.YELLOW);
+                            break;
+
+                        // 残りの週が１なら、情報セキュリティとシステムアーキテクチャを勉強する
+                        case 1:
+                            ((TextView) findViewById(R.id.security_sunday)).setBackgroundColor(Color.YELLOW);
+                            ((TextView) findViewById(R.id.architecture_sunday)).setBackgroundColor(Color.YELLOW);
+                            break;
+
+                        // 残りの週が２なら、プログラムとネットワークを勉強する
+                        case 2:
+                            ((TextView) findViewById(R.id.program_sunday)).setBackgroundColor(Color.YELLOW);
+                            ((TextView) findViewById(R.id.network_sunday)).setBackgroundColor(Color.YELLOW);
+                    }
                     break;
 
                 // 月曜日
